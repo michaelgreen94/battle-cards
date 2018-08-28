@@ -1,5 +1,7 @@
 <template>
-  <div class="battlefield">
+  <div class="select">
+    <Player/>
+    <Enemy/>
   </div>
 </template>
 
@@ -21,3 +23,9 @@
     }
   }
 </script>
+
+<style>
+  * {
+    outline: 1px solid red;
+  }
+</style>

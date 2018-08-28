@@ -1,6 +1,6 @@
 <template>
   <div class="enemy">
-
+    <h1>Enemy Here</h1>
   </div>
 </template>
 
