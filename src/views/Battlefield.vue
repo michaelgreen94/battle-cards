@@ -1,7 +1,8 @@
 <template>
-  <div class="select">
-    <Player/>
+  <div class="battlefield">
     <Enemy/>
+    <Player/>
+    <button @click="surrender">I Quit</button>
   </div>
 </template>
 
@@ -15,7 +16,9 @@
 
     },
     methods: {
-
+      surrender() {
+        this.$router.push('/')
+      }
     },
     components: {
       Enemy,
@@ -25,7 +28,7 @@
 </script>
 
 <style>
-  * {
+  /* * {
     outline: 1px solid red;
-  }
+  } */
 </style>
