@@ -1,5 +1,5 @@
 <template>
-  <div class="select-deck">
+  <div class="container-fluid select-deck">
     <div v-if="!game.id">
       <StartGame/>
     </div>

@@ -13,7 +13,6 @@ export default new Vuex.Store({
   state: {
     games: [],
     game: {}
-    //game = object or array?
   },
   mutations: {
     setGame(state, data) {
