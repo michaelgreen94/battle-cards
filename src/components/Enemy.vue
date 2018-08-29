@@ -1,8 +1,8 @@
 <template>
   <div class="row enemy">
     <h1>{{enemy.name}}</h1>
-    <div class="col card" v-for="(target, key) in enemy.hand">
-      <img class="card-img-top" src="//placehold.it/100x100" alt="">
+    <div class="col card bg-secondary" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visable = false">
+      <img class="card-img-top" src="//placehold.it/200x200" alt="">
       <div class="card-body">
         <h5 class="card-title">{{enemy.hand[key].name}}</h5>
       </div>
@@ -11,6 +11,9 @@
         <li class="list-group-item">Defense: {{enemy.hand[key].defense}}</li>
         <li class="list-group-item">Health: {{enemy.hand[key].health}}</li>
       </ul>
+    </div>
+    <div v-else="enemy.hand[key].visable = true">
+      <img src="../assets/gamecard.gif" alt="">
     </div>
   </div>
 </template>
