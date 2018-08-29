@@ -1,10 +1,10 @@
 <template>
   <div class="row player">
     <h1>{{player.name}}</h1>
-    <div class="col card bg-secondary" v-for="(target, key) in player.hand" @click="attack(key)">
+    <div class="col card bg-secondary" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
       <img class="card-img-top" src="//placehold.it/200x200" alt="">
       <div class="card-body">
-        <h5 class="card-title">{{player.hand[key].name}}</h5>
+        <h5 class="card-title">{{player.hand[key].name}} {{player.id}}</h5>
       </div>
       <ul class="list-group">
         <li class="list-group-item">Attack: {{player.hand[key].attack}}</li>
@@ -18,8 +18,8 @@
 <script>
   export default {
     name: "Player",
-    data() {
-      return {}
+    mounted() {
+
     },
     computed: {
       game() {
@@ -28,6 +28,13 @@
       player() {
         return this.game.players[0]
       }
+    },
+    methods: {
+      playerCard(playerId, cardId) {
+        this.$store.dispatch('playerCard', card)
+      }
     }
   }
 </script>
+
+<style></style>

@@ -8,7 +8,7 @@
         <input v-model="gameConfig.set" type="number" min="0" max="4">
         <h3>Number of Opponents</h3>
         <input v-model="gameConfig.opponents" type="number" min="0" max="5">
-        <button type="submit">Go</button>
+        <button type="submit">Start Game</button>
       </form>
     </div>
   </div>
@@ -29,3 +29,5 @@
     }
   }
 </script>
+
+<style></style>

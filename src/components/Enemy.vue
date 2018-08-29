@@ -1,7 +1,7 @@
 <template>
   <div class="row enemy">
     <h1>{{enemy.name}}</h1>
-    <div class="col card bg-secondary" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visable = false" @click="eAttack(key)">
+    <div class="col card bg-secondary" v-for="(target, key) in enemy.hand">
       <img class="card-img-top" src="//placehold.it/200x200" alt="">
       <div class="card-body">
         <h5 class="card-title">{{enemy.hand[key].name}}</h5>
@@ -12,17 +12,14 @@
         <li class="list-group-item">Health: {{enemy.hand[key].health}}</li>
       </ul>
     </div>
-    <div class="col" v-else="enemy.hand[key].visable = true">
-      <img @click="eAttack(key)" src="../assets/gamecard.gif" alt="">
-    </div>
   </div>
 </template>
 
 <script>
   export default {
     name: "Enemy",
-    data() {
-      return {};
+    mounted() {
+
     },
     computed: {
       game() {
@@ -34,3 +31,5 @@
     }
   }
 </script>
+
+<style></style>

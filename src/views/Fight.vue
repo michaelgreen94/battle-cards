@@ -14,7 +14,7 @@
   import StartGame from "@/components/StartGame"
   import Battlefield from "@/components/Battlefield"
   export default {
-    name: 'SelectDeck',
+    name: 'Fight',
     computed: {
       game() {
         return this.$store.state.game

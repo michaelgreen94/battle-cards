@@ -2,7 +2,6 @@
   <div class="battlefield">
     <Enemy/>
     <Player/>
-    <button @click="surrender">I Quit</button>
   </div>
 </template>
 
@@ -12,20 +11,11 @@
 
   export default {
     name: 'Battlefield',
-    data() {
-      return {
-        attackObj: {}
-      }
-    },
     computed: {
 
     },
     methods: {
-      eAttack(key) {
-        attackObj.enemy.id
-        attackObj.enemy.hand[key].id
-        this.$store.dispatch("attack", this.attackObj)
-      }
+
     },
     components: {
       Enemy,
