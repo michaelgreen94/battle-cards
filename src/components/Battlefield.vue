@@ -22,6 +22,7 @@
     },
     methods: {
       eAttack(key) {
+        debugger
         attackObj.enemy.id
         attackObj.enemy.hand[key].id
         this.$store.dispatch("attack", this.attackObj)
