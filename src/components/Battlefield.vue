@@ -12,12 +12,20 @@
 
   export default {
     name: 'Battlefield',
+    data() {
+      return {
+        attackObj: {}
+      }
+    },
     computed: {
 
     },
     methods: {
-      surrender() {
-        this.$router.push('/')
+      eAttack(key) {
+        attackObj.enemy.id
+        attackObj.enemy.hand[key].id
+        this.$store.dispatch("attack", this.attackObj)
+        debugger
       }
     },
     components: {
