@@ -1,7 +1,8 @@
 <template>
   <div class="row player">
-    <div class="col card" v-for="(target, key) in player.hand">
-      <img class="card-img-top" src="//placehold.it/100x100" alt="">
+    <h1>{{player.name}}</h1>
+    <div class="col card bg-secondary" v-for="(target, key) in player.hand">
+      <img class="card-img-top" src="//placehold.it/200x200" alt="">
       <div class="card-body">
         <h5 class="card-title">{{player.hand[key].name}}</h5>
       </div>
