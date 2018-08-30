@@ -18,9 +18,6 @@
 <script>
   export default {
     name: "Enemy",
-    mounted() {
-
-    },
     computed: {
       game() {
         return this.$store.state.game

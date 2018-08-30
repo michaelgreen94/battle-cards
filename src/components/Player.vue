@@ -18,9 +18,6 @@
 <script>
   export default {
     name: "Player",
-    mounted() {
-
-    },
     computed: {
       game() {
         return this.$store.state.game

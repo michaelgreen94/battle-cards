@@ -26,11 +26,16 @@ export default new Vuex.Store({
           commit('setGame', res.data)
         })
     },
+    getGame({ commit, dispatch }, gameId) {
+      gameApi.get('/' + gameId)
+        .then(res => {
+          commit('setGame', res.data.data)
+        })
+    },
     attack({ commit, dispatch }, payload) {
-      debugger
       gameApi.put('/' + payload.gameId, payload.attackObj)
         .then(res => {
-          commit('setGame', res.data)
+          dispatch('getGame')
         })
     }
   }

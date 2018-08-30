@@ -1,7 +1,7 @@
 <template>
   <div class="battlefield">
     <Enemy v-on:addParams="addParams" />
-    <button v-if="attackObj.playerCardId && attackObj.opponentCardId" @click="attack()">Attack</button>
+    <button v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack">Attack</button>
     <Player v-on:addPlayerParams="addPlayerParams" />
   </div>
 </template>
@@ -38,6 +38,7 @@
       },
       attack() {
         this.$store.dispatch('attack', { attackObj: this.attackObj, gameId: this.game.id })
+        this.$store.dispatch('getGame', this.game.id)
       }
     },
     components: {
