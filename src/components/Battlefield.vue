@@ -3,7 +3,9 @@
     <div class="enemy-hand">
       <Enemy v-on:addParams="addParams" />
     </div>
-    <button v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack">Attack</button>
+    <div class="jungle">
+      <button v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack">Attack</button>
+    </div>
     <div class="player-hand">
       <Player v-on:addPlayerParams="addPlayerParams" />
     </div>
@@ -57,13 +59,7 @@
     outline: 1px solid red;
   }
 
-  .enemy-hand {
-    display: flex;
-    flex-direction: column
-  }
-
-  .player-hand {
-    display: flex;
-    flex-direction: column
+  .jungle {
+    height: 10rem
   }
 </style>
