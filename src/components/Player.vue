@@ -4,7 +4,7 @@
     <div class="col card bg-secondary" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
       <img class="card-img-top" src="//placehold.it/200x200" alt="">
       <div class="card-body">
-        <h5 class="card-title">{{player.hand[key].name}} {{player.id}}</h5>
+        <h5 class="card-title">{{player.hand[key].name}}</h5>
       </div>
       <ul class="list-group">
         <li class="list-group-item">Attack: {{player.hand[key].attack}}</li>
@@ -30,8 +30,10 @@
       }
     },
     methods: {
-      playerCard(playerId, cardId) {
-        this.$store.dispatch('playerCard', card)
+      playerCard(playerId, playerCardId) {
+        this.$emit("addPlayerParams", { playerId, playerCardId })
+        // debugger
+        // this.$store.dispatch('attack', { this.attackObj, gameId: this.game.id })
       }
     }
   }

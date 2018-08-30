@@ -17,11 +17,20 @@ export default new Vuex.Store({
   mutations: {
     setGame(state, data) {
       state.game = data
+    },
+    attack(state, data) {
+
     }
   },
   actions: {
     newGame({ commit, dispatch }, gameConfig) {
       gameApi.post('', gameConfig)
+        .then(res => {
+          commit('setGame', res.data)
+        })
+    },
+    attack({ commit, dispatch }, payload) {
+      gameApi.put('/' + payload.gameId, payload.attackObj)
         .then(res => {
           commit('setGame', res.data)
         })
