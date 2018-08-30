@@ -1,7 +1,7 @@
 <template>
-  <div class="row player">
+  <div class="player">
     <h1>{{player.name}}</h1>
-    <div class="col card bg-secondary" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
+    <div class="card bg-secondary" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
       <img class="card-img-top" :src="player.hand[key].img" alt="">
       <div class="card-body">
         <h5 class="card-title">{{player.hand[key].name}}</h5>

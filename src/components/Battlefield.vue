@@ -1,8 +1,12 @@
 <template>
   <div class="battlefield">
-    <Enemy v-on:addParams="addParams" />
+    <div class="enemy-hand">
+      <Enemy v-on:addParams="addParams" />
+    </div>
     <button v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack">Attack</button>
-    <Player v-on:addPlayerParams="addPlayerParams" />
+    <div class="player-hand">
+      <Player v-on:addPlayerParams="addPlayerParams" />
+    </div>
   </div>
 </template>
 
@@ -31,6 +35,7 @@
       addParams(payload) {
         this.attackObj.opponentId = payload.opponentId
         this.attackObj.opponentCardId = payload.opponentCardId
+
       },
       addPlayerParams(payload) {
         this.attackObj.playerId = payload.playerId
@@ -38,7 +43,6 @@
       },
       attack() {
         this.$store.dispatch('attack', { attackObj: this.attackObj, gameId: this.game.id })
-        this.$store.dispatch('getGame', this.game._id)
       }
     },
     components: {
@@ -49,7 +53,7 @@
 </script>
 
 <style>
-  /* * {
+  * {
     outline: 1px solid red;
-  } */
+  }
 </style>

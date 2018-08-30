@@ -25,7 +25,7 @@
     methods: {
       startGame() {
         this.$store.dispatch("newGame", this.gameConfig)
-        this.$store.dispatch("getGames")
+        // this.$store.dispatch("getGames")
       }
     }
   }
