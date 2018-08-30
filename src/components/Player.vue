@@ -33,7 +33,6 @@
       playerCard(playerId, playerCardId) {
         this.$emit("addPlayerParams", { playerId, playerCardId })
         // debugger
-        // this.$store.dispatch('attack', { this.attackObj, gameId: this.game.id })
       }
     }
   }

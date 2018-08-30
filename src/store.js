@@ -17,9 +17,6 @@ export default new Vuex.Store({
   mutations: {
     setGame(state, data) {
       state.game = data
-    },
-    attack(state, data) {
-
     }
   },
   actions: {
@@ -30,6 +27,7 @@ export default new Vuex.Store({
         })
     },
     attack({ commit, dispatch }, payload) {
+      debugger
       gameApi.put('/' + payload.gameId, payload.attackObj)
         .then(res => {
           commit('setGame', res.data)
