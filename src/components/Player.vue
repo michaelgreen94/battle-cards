@@ -1,29 +1,21 @@
 <template>
   <div class="player">
-    <div class="dead-cards">
-      <h1>Graveyard</h1>
-      <h1>{{player.deadCards.length}}</h1>
-    </div>
-    <div class="deck">
-      <h1>Deck</h1>
-      <h1>{{player.remainingCards}}</h1>
-    </div>
-    <h1>{{player.name}}</h1>
     <div class="visible">
-      <div class="card bg-secondary" style="" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
-        <img class="card-img-top" :src="player.hand[key].img" alt="">
-        <div class="card-body">
-          <h5 class="card-title">{{player.hand[key].name}}</h5>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">Attack: {{player.hand[key].attack}}</li>
-          <li class="list-group-item">Defense: {{player.hand[key].defense}}</li>
-          <li class="list-group-item">Health: {{player.hand[key].health}}</li>
-        </ul>
+      <div class="p-card" style="" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
+        <img class="p-img" :src="player.hand[key].img" alt="">
       </div>
     </div>
   </div>
 </template>
+<!-- <div class="dead-cards">
+    <h1>Graveyard</h1>
+    <h1>{{player.deadCards.length}}</h1>
+  </div>
+  <div class="deck">
+    <h1>Deck</h1>
+    <h1>{{player.remainingCards}}</h1>
+  </div>
+  <h1>{{player.name}}</h1> -->
 
 <script>
   export default {
@@ -51,10 +43,29 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    height: 37.2vh;
   }
 
   .player {
     display: flex;
     flex-wrap: wrap;
+    position: absolute;
+    bottom: 0;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .p-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(141, 107, 43)
+  }
+
+  .p-img {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
   }
 </style>

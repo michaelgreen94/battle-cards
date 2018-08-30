@@ -45,6 +45,7 @@
       },
       attack() {
         this.$store.dispatch('attack', { attackObj: this.attackObj, gameId: this.game.id })
+        this.attackObj = {}
       }
     },
     components: {
@@ -67,9 +68,21 @@
   }
 
   .fight {
-    height: 5rem;
-    width: 10rem;
+    height: 2rem;
+    width: 6rem;
     justify-content: center;
-    align-self: center
+    align-self: center;
+    border-radius: 10px;
+    background-color: red;
+    border: none;
+    transition: box-shadow 0.2s;
+  }
+
+  .fight:hover {
+    box-shadow: 1px 2px 9px 1px black;
+  }
+
+  .battlefield {
+    height: 100vh;
   }
 </style>

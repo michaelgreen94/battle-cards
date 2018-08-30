@@ -1,32 +1,24 @@
 <template>
   <div class="enemy">
     <div class="visible">
-      <div class="card bg-secondary" style="" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
-        <img class="card-img-top" :src="enemy.hand[key].img" alt="">
-        <div class="card-body">
-          <h5 class="card-title">{{enemy.hand[key].name}}</h5>
-        </div>
-        <ul class="list-group">
-          <li class="list-group-item">Attack: {{enemy.hand[key].attack}}</li>
-          <li class="list-group-item">Defense: {{enemy.hand[key].defense}}</li>
-          <li class="list-group-item">Health: {{enemy.hand[key].health}}</li>
-        </ul>
+      <div class="e-card" style="" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+        <img class="v-img" :src="enemy.hand[key].img" alt="">
       </div>
       <div class="hidden" v-else>
-        <img class="e-img" src="../assets/gamecard2.png" alt="" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+        <img class="h-img" src="../assets/gamecard2Cropped.jpg" alt="" @click="enemyCard(enemy.id, enemy.hand[key].id)">
       </div>
     </div>
-    <div class="dead-cards">
-      <h1>Graveyard</h1>
-      <h1>{{enemy.deadCards.length}}</h1>
-    </div>
-    <div class="deck">
-      <h1>Deck</h1>
-      <h1>{{enemy.remainingCards}}</h1>
-    </div>
-    <h1>{{enemy.name}}</h1>
   </div>
 </template>
+<!-- <div class="dead-cards">
+          <h1>Graveyard</h1>
+          <h1>{{enemy.deadCards.length}}</h1>
+        </div>
+        <div class="deck">
+          <h1>Deck</h1>
+          <h1>{{enemy.remainingCards}}</h1>
+        </div>
+        <h1>{{enemy.name}}</h1> -->
 
 <script>
   export default {
@@ -57,7 +49,7 @@
     height: 25vh;
   }
 
-  .e-img {
+  .h-img {
     display: block;
     max-width: 100px;
     max-height: 100px;
@@ -70,15 +62,17 @@
     flex-wrap: wrap;
   }
 
-  .card * {
-    width: 100px;
+  .v-img {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
     height: auto;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-size: 5px;
+    width: auto;
   }
 
-  .card-body {
-    flex: none !important;
+  .e-card {
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(141, 107, 43)
   }
 </style>
