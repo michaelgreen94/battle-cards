@@ -1,4 +1,4 @@
-<!-- # battle-cards
+# battle-cards
 
 ## Project setup
 ```
@@ -113,4 +113,4 @@ Visualization
 - Once an enemy card has been attacked its stats are revealed until that card is destroyed
 Functionality
 - The player does not have to manually draw new cards, their hand will always be full until their deck is empty
-- The game is winnable/loseable and tieable -->
+- The game is winnable/loseable and tieable
