@@ -56,4 +56,14 @@
   * {
     outline: 1px solid red;
   }
+
+  .enemy-hand {
+    display: flex;
+    flex-direction: column
+  }
+
+  .player-hand {
+    display: flex;
+    flex-direction: column
+  }
 </style>

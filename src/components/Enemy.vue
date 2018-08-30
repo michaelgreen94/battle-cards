@@ -1,7 +1,6 @@
 <template>
   <div class="enemy">
-    <h1>{{enemy.name}}</h1>
-    <div class="card bg-secondary e-card" v-for="(target, key) in enemy.hand" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+    <div class="card bg-secondary" style="width: 18rem;" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visable" @click="enemyCard(enemy.id, enemy.hand[key].id)">
       <img class="card-img-top" :src="enemy.hand[key].img" alt="">
       <div class="card-body">
         <h5 class="card-title">{{enemy.hand[key].name}}</h5>
@@ -12,6 +11,10 @@
         <li class="list-group-item">Health: {{enemy.hand[key].health}}</li>
       </ul>
     </div>
+    <div class="hidden" v-else>
+      <img src="../assets/gamecard2.png" alt="">
+    </div>
+    <h1>{{enemy.name}}</h1>
   </div>
 </template>
 
@@ -35,12 +38,4 @@
   }
 </script>
 
-<style>
-  /* .e-card {
-    justify-content: space-evenly;
-    flex-direction: row;
-    display: flex;
-    height: 200px;
-    width: 150px
-  } */
-</style>
+<style></style>
