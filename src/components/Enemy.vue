@@ -1,6 +1,6 @@
 <template>
   <div class="enemy">
-    <div class="card bg-secondary" style="width: 18rem;" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visable" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+    <div class="card bg-secondary" style="width: 18rem;" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
       <img class="card-img-top" :src="enemy.hand[key].img" alt="">
       <div class="card-body">
         <h5 class="card-title">{{enemy.hand[key].name}}</h5>
