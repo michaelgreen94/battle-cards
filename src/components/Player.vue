@@ -10,7 +10,7 @@
     </div>
     <h1>{{player.name}}</h1>
     <div class="visible">
-      <div class="card bg-secondary" style="width: 18rem;" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
+      <div class="card bg-secondary" style="" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
         <img class="card-img-top" :src="player.hand[key].img" alt="">
         <div class="card-body">
           <h5 class="card-title">{{player.hand[key].name}}</h5>

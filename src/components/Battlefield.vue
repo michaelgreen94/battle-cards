@@ -4,7 +4,7 @@
       <Enemy v-on:addParams="addParams" />
     </div>
     <div class="jungle">
-      <button v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack">Attack</button>
+      <button class="fight" v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack">Attack</button>
     </div>
     <div class="player-hand">
       <Player v-on:addPlayerParams="addPlayerParams" />
@@ -60,6 +60,16 @@
   }
 
   .jungle {
-    height: 10rem
+    display: flex;
+    justify-content: center;
+    height: 10rem;
+    /* align-items: center */
+  }
+
+  .fight {
+    height: 5rem;
+    width: 10rem;
+    justify-content: center;
+    align-self: center
   }
 </style>

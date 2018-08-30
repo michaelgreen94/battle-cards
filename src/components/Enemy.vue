@@ -1,7 +1,7 @@
 <template>
   <div class="enemy">
     <div class="visible">
-      <div class="card bg-secondary" style="width: 18rem;" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+      <div class="card bg-secondary" style="" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
         <img class="card-img-top" :src="enemy.hand[key].img" alt="">
         <div class="card-body">
           <h5 class="card-title">{{enemy.hand[key].name}}</h5>
@@ -13,7 +13,7 @@
         </ul>
       </div>
       <div class="hidden" v-else>
-        <img src="../assets/gamecard.gif" alt="" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+        <img class="e-img" src="../assets/gamecard2.png" alt="" @click="enemyCard(enemy.id, enemy.hand[key].id)">
       </div>
     </div>
     <div class="dead-cards">
@@ -54,10 +54,31 @@
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    height: 25vh;
+  }
+
+  .e-img {
+    display: block;
+    max-width: 100px;
+    max-height: 100px;
+    height: auto;
+    width: auto;
   }
 
   .enemy {
     display: flex;
     flex-wrap: wrap;
+  }
+
+  .card * {
+    width: 100px;
+    height: auto;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 5px;
+  }
+
+  .card-body {
+    flex: none !important;
   }
 </style>
