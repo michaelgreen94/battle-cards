@@ -45,7 +45,12 @@
       },
       attack() {
         this.$store.dispatch('attack', { attackObj: this.attackObj, gameId: this.game.id })
-        this.attackObj = {}
+        this.attackObj = {
+          playerId: "",
+          playerCardId: "",
+          opponentId: "",
+          opponentCardId: ""
+        }
       }
     },
     components: {
