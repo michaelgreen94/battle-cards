@@ -12,7 +12,15 @@
       </ul>
     </div>
     <div class="hidden" v-else>
-      <img src="../assets/gamecard2.png" alt="">
+      <img src="../assets/gamecard2.png" alt="" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+    </div>
+    <div class="dead-cards">
+      <h1>Graveyard</h1>
+      <h1>{{enemy.deadCards.length}}</h1>
+    </div>
+    <div class="deck">
+      <h1>Deck</h1>
+      <h1>{{enemy.remainingCards}}</h1>
     </div>
     <h1>{{enemy.name}}</h1>
   </div>

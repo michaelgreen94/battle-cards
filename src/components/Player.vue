@@ -12,6 +12,14 @@
         <li class="list-group-item">Health: {{player.hand[key].health}}</li>
       </ul>
     </div>
+    <div class="dead-cards">
+      <h1>Graveyard</h1>
+      <h1>{{player.deadCards.length}}</h1>
+    </div>
+    <div class="deck">
+      <h1>Deck</h1>
+      <h1>{{player.remainingCards}}</h1>
+    </div>
   </div>
 </template>
 
