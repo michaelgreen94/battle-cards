@@ -2,7 +2,7 @@
   <div class="row enemy">
     <h1>{{enemy.name}}</h1>
     <div class="col card bg-secondary" v-for="(target, key) in enemy.hand" @click="enemyCard(enemy.id, enemy.hand[key].id)">
-      <img class="card-img-top" src="//placehold.it/200x200" alt="">
+      <img class="card-img-top" :src="enemy.hand[key].img" alt="">
       <div class="card-body">
         <h5 class="card-title">{{enemy.hand[key].name}}</h5>
       </div>

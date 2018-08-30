@@ -38,7 +38,7 @@
       },
       attack() {
         this.$store.dispatch('attack', { attackObj: this.attackObj, gameId: this.game.id })
-        this.$store.dispatch('getGame', this.game.id)
+        this.$store.dispatch('getGame', this.game._id)
       }
     },
     components: {

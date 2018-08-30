@@ -17,6 +17,9 @@ export default new Vuex.Store({
   mutations: {
     setGame(state, data) {
       state.game = data
+    },
+    storeGames(state, data) {
+      state.games = data
     }
   },
   actions: {
@@ -24,6 +27,12 @@ export default new Vuex.Store({
       gameApi.post('', gameConfig)
         .then(res => {
           commit('setGame', res.data)
+        })
+    },
+    getGames({ commit, dispatch }) {
+      gameApi.get('')
+        .then(res => {
+          commit('storeGames', res.data)
         })
     },
     getGame({ commit, dispatch }, gameId) {
