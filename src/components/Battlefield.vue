@@ -4,7 +4,7 @@
       <Enemy v-on:addParams="addParams" />
     </div>
     <div class="jungle">
-      <a href="#" v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack"><span></span>Fight</a>
+      <a class="fight" href="#" v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack"><span></span>Fight</a>
       <a href="#" v-if="game.dead[0]">New Game</a>
     </div>
     <div class="player-hand">
@@ -88,7 +88,7 @@
     text-decoration: none;
     font-size: 20px;
     letter-spacing: 4px;
-    z-index: -1;
+    /* z-index: 1; */
   }
 
   a:before,
