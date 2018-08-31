@@ -1,12 +1,7 @@
 <template>
   <div class="world">
-    <div v-if="!game.id">
-      <StartGame/>
-    </div>
-    <div v-else>
-      <battlefield></battlefield>
-    </div>
-
+    <StartGame v-if="!game.id" />
+    <battlefield v-else></battlefield>
   </div>
 </template>
 
@@ -32,6 +27,11 @@
 
 <style>
   .world {
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
   }
 </style>

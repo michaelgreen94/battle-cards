@@ -5,7 +5,7 @@
     </div>
     <div class="jungle">
       <a href="#" v-bind:class="{fight : attackObj.playerCardId && attackObj.opponentCardId}" @click.prevent="attack"><span></span>Fight</a>
-      <a class="results" href="#" v-if="game.dead[0]">New Game</a>
+      <a class="fight" href="#" v-if="game.over">New Game</a>
     </div>
     <div class="player-hand">
       <Player v-on:addPlayerParams="addPlayerParams" />
@@ -82,8 +82,8 @@
   }
 
   a {
-    width: 180px;
-    height: 50px;
+    width: 11.25rem;
+    height: 3.125rem;
   }
 
   .fight {
@@ -96,12 +96,12 @@
     background: #262626;
     text-transform: uppercase;
     text-align: center;
-    line-height: 50px;
+    line-height: 3.125rem;
     color: #ff0;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.25rem;
     letter-spacing: 4px;
-    margin: 20px 0 20px 0;
+    /* margin: 1.25rem 0 1.25rem 0; */
     /* z-index: 1; */
   }
 
@@ -111,8 +111,8 @@
   .fight span:after {
     content: '';
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 0.625rem;
+    height: 0.625rem;
     background: #ff0;
     transition: 1s;
     mix-blend-mode: hue;
@@ -142,8 +142,16 @@
   .fight:hover:after,
   .fight:hover span:before,
   .fight:hover span:after {
-    width: calc( 180px / 2);
-    height: calc( 50px / 2);
+    width: calc( 11.25rem / 2);
+    height: calc( 3.125rem / 2);
+  }
+
+  .battlefield {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 
   /* .enemy-hand {

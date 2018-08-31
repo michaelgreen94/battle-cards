@@ -1,7 +1,7 @@
 <template>
   <div class="start">
-    <img class="game-name" src="../assets/dark.png" alt="">
     <div class="game-form">
+      <img class="game-name" src="../assets/dark.png" alt="">
       <img class="logo" src="../assets/logo.png" alt="">
       <form @submit.prevent='startGame'>
         <label for="name">Your Name</label>
@@ -35,13 +35,13 @@
 
 <style>
   .game-form {
-    width: 320px;
+    width: 20rem;
     height: auto;
     background-color: #5a5a5a8a;
     color: #ffffff;
     padding: 2rem;
     text-align: left;
-    border-radius: 5px;
+    border-radius: 0.3125rem;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -50,8 +50,8 @@
   }
 
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: 6.25rem;
     position: absolute;
     top: -50px;
     left: calc(50% - 50px);
@@ -65,7 +65,7 @@
 
   input {
     width: 100%;
-    margin-bottom: 20px
+    margin-bottom: 1.25rem
   }
 
   .game-form input[type="text"],
@@ -74,9 +74,9 @@
     border-bottom: 1px solid black;
     background: transparent;
     outline: none;
-    height: 40px;
+    height: 2.5rem;
     color: white;
-    font-size: 16px
+    font-size: 1rem
   }
 
   .game-button {
@@ -86,9 +86,9 @@
     color: white;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
     transition: background-color .3s;
-    height: 40px
+    height: 2.5rem
   }
 
   .game-button:hover {
@@ -96,6 +96,10 @@
   }
 
   .game-name {
-    transform: translate(-62%, 186%);
+    width: 50%;
+    height: 30%;
+    position: absolute;
+    top: -26%;
+    left: -9%;
   }
 </style>

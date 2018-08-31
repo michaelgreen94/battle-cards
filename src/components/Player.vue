@@ -43,41 +43,42 @@
 
   .player-name {
     width: 100%;
-    padding: 2px;
+    padding: 1.125rem;
     color: white;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .card {
-    width: 250px;
-    height: 350px;
+    margin-bottom: 1rem;
+    width: 15.625rem;
+    height: 21.875rem;
     background: linear-gradient(to top, #41b883, #50e09f, white);
     transition: box-shadow .2s;
-    border-radius: 15px;
+    border-radius: 0.9375rem;
   }
 
 
 
   .card:hover {
-    box-shadow: 0px 0px 20px #ffffffb3;
+    box-shadow: 0 0 1.25rem #ffffffb3;
     cursor: pointer;
   }
 
   .name {
-    height: 50px;
-    width: 250px;
+    height: 3.125rem;
+    width: 15.625rem;
     background-color: #00000080;
-    line-height: 90px;
+    line-height: 5.625rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     flex-wrap: wrap;
     color: white;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 0.9375rem;
+    border-bottom-right-radius: 0.9375rem;
   }
 
   .card-img {
@@ -86,7 +87,7 @@
 
   .stats {
     display: flex;
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     transform: translate(5%, 35%);
   }

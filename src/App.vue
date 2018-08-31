@@ -26,7 +26,20 @@
     font-family: sans-serif;
   }
 
-  html {
-    height: 100%
+  html,
+  body {
+    height: 100vh;
+  }
+
+  @media (max-width: 1600px) {
+    html {
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 1000px) {
+    html {
+      font-size: 10px;
+    }
   }
 </style>
