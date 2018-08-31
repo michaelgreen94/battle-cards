@@ -4,7 +4,7 @@
       <Enemy v-on:addParams="addParams" />
     </div>
     <div class="jungle">
-      <a class="fight" href="#" v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack"><span></span>Fight</a>
+      <a href="#" v-bind:class="{fight : attackObj.playerCardId && attackObj.opponentCardId}" @click.prevent="attack"><span></span>Fight</a>
       <a class="results" href="#" v-if="game.dead[0]">New Game</a>
     </div>
     <div class="player-hand">
@@ -70,16 +70,29 @@
   } */
 
   .jungle {
-    height: 19vh;
+    /* height: 12vh; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  a:not(.fight) {
+    visibility: hidden;
   }
 
   a {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 180px;
     height: 50px;
+  }
+
+  .fight {
+    /* position: absolute; */
+    position: relative;
+    display: block;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
     background: #262626;
     text-transform: uppercase;
     text-align: center;
@@ -88,13 +101,14 @@
     text-decoration: none;
     font-size: 20px;
     letter-spacing: 4px;
+    margin: 20px 0 20px 0;
     /* z-index: 1; */
   }
 
-  a:before,
-  a:after,
-  span:before,
-  span:after {
+  .fight:before,
+  .fight:after,
+  .fight span:before,
+  .fight span:after {
     content: '';
     position: absolute;
     width: 10px;
@@ -104,39 +118,39 @@
     mix-blend-mode: hue;
   }
 
-  a:before {
+  .fight:before {
     top: -2px;
     left: -2px;
   }
 
-  a:after {
+  .fight:after {
     top: -2px;
     right: -2px;
   }
 
-  span:before {
+  .fight span:before {
     bottom: -2px;
     left: -2px;
   }
 
-  span:after {
+  .fight span:after {
     bottom: -2px;
     right: -2px;
   }
 
-  a:hover:before,
-  a:hover:after,
-  a:hover span:before,
-  a:hover span:after {
+  .fight:hover:before,
+  .fight:hover:after,
+  .fight:hover span:before,
+  .fight:hover span:after {
     width: calc( 180px / 2);
     height: calc( 50px / 2);
   }
 
-  .enemy-hand {
+  /* .enemy-hand {
     transform: translate(0%, 6%);
   }
 
   .player-hand {
     transform: translate(0%, 12%);
-  }
+  } */
 </style>

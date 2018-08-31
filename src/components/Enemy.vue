@@ -10,6 +10,7 @@
     <div class="hidden" v-else>
       <div class="h-img" @click="enemyCard(enemy.id, enemy.hand[key].id)"></div>
     </div>
+    <div class="enemy-name">{{enemy.name}}</div>
   </div>
 </template>
 
@@ -41,6 +42,14 @@
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  .enemy-name {
+    width: 100%;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   .e-card {

@@ -21,6 +21,7 @@
     background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: sans-serif;
   }

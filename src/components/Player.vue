@@ -1,5 +1,6 @@
 <template>
   <div class="player">
+    <div class="player-name">{{player.name}}</div>
     <div class="card" style="" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
       <div class="stats"><i class="fas fa-bolt"></i> {{player.hand[key].attack}}</div>
       <div class="stats"><i class="fas fa-shield-alt"></i> {{player.hand[key].defense}}</div>
@@ -38,6 +39,14 @@
     justify-content: space-around;
     flex-wrap: wrap;
     flex-direction: row;
+  }
+
+  .player-name {
+    width: 100%;
+    padding: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
   }
 
   .card {
