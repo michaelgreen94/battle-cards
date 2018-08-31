@@ -4,7 +4,7 @@
       <Enemy v-on:addParams="addParams" />
     </div>
     <div class="jungle">
-      <button class="fight" v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack">Attack</button>
+      <a href="#" v-if="attackObj.playerCardId && attackObj.opponentCardId" @click.prevent="attack"><span></span>Fight</a>
     </div>
     <div class="player-hand">
       <Player v-on:addPlayerParams="addPlayerParams" />
@@ -65,29 +65,65 @@
     outline: 1px solid red;
   } */
 
-  /* .jungle {
-    display: flex;
-    justify-content: center;
-    height: 10rem;
-    align-items: center
+  .jungle {
+    height: 19vh;
   }
 
-  .fight {
-    height: 2rem;
-    width: 6rem;
-    justify-content: center;
-    align-self: center;
-    border-radius: 10px;
-    background-color: red;
-    border: none;
-    transition: box-shadow 0.2s;
+  a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 50px;
+    background: #262626;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 50px;
+    color: #ff0;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 4px;
   }
 
-  .fight:hover {
-    box-shadow: 1px 2px 9px 1px black;
+  a:before,
+  a:after,
+  span:before,
+  span:after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #ff0;
+    transition: 1s;
+    mix-blend-mode: hue;
   }
 
-  .battlefield {
-    height: 100vh;
-  } */
+  a:before {
+    top: -2px;
+    left: -2px;
+  }
+
+  a:after {
+    top: -2px;
+    right: -2px;
+  }
+
+  span:before {
+    bottom: -2px;
+    left: -2px;
+  }
+
+  span:after {
+    bottom: -2px;
+    right: -2px;
+  }
+
+  a:hover:before,
+  a:hover:after,
+  a:hover span:before,
+  a:hover span:after {
+    width: calc( 180px / 2);
+    height: calc( 50px / 2);
+  }
 </style>

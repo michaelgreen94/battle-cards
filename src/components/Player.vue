@@ -9,15 +9,6 @@
     </div>
   </div>
 </template>
-<!-- <div class="dead-cards">
-    <h1>Graveyard</h1>
-    <h1>{{player.deadCards.length}}</h1>
-  </div>
-  <div class="deck">
-    <h1>Deck</h1>
-    <h1>{{player.remainingCards}}</h1>
-  </div>
-  <h1>{{player.name}}</h1> -->
 
 <script>
   export default {
@@ -50,8 +41,8 @@
   }
 
   .card {
-    width: 270px;
-    height: 400px;
+    width: 250px;
+    height: 350px;
     background: linear-gradient(to top, #41b883, #50e09f, white);
     transition: box-shadow .2s;
     border-radius: 15px;
@@ -66,7 +57,7 @@
 
   .name {
     height: 50px;
-    width: 270px;
+    width: 250px;
     background-color: #00000080;
     line-height: 90px;
     display: flex;
@@ -76,6 +67,8 @@
     font-weight: bold;
     flex-wrap: wrap;
     color: white;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 
   .card-img {
@@ -88,46 +81,4 @@
     font-weight: bold;
     transform: translate(5%, 35%);
   }
-
-  /* .card-header img {
-    height: 100%;
-    display: block;
-  } */
-
-
-
-
-
-
-
-  /* .visible {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 100%;
-    height: 37.2vh;
-  }
-
-  .player {
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-    bottom: 0;
-    justify-content: space-evenly;
-    width: 100%;
-  }
-
-  .p-card {
-    border: 2px solid black;
-    border-radius: 10px;
-    background-color: rgb(141, 107, 43)
-  }
-
-  .p-img {
-    display: block;
-    max-width: 100px;
-    max-height: 100px;
-    height: auto;
-    width: auto;
-  } */
 </style>
