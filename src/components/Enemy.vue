@@ -1,6 +1,6 @@
 <template>
   <div class="enemy">
-    <div class="visible">
+    <div class="e-visible">
       <div class="e-card" style="" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
         <img class="v-img" :src="enemy.hand[key].img" alt="">
       </div>
@@ -41,7 +41,7 @@
 </script>
 
 <style>
-  .visible {
+  /* .visible {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -74,5 +74,5 @@
     border: 2px solid black;
     border-radius: 10px;
     background-color: rgb(141, 107, 43)
-  }
+  } */
 </style>

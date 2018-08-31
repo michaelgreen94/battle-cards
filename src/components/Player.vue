@@ -1,6 +1,6 @@
 <template>
   <div class="player">
-    <div class="visible">
+    <div class="p-visible">
       <div class="p-card" style="" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
         <img class="p-img" :src="player.hand[key].img" alt="">
       </div>
@@ -38,7 +38,7 @@
 </script>
 
 <style>
-  .visible {
+  /* .visible {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -67,5 +67,5 @@
     max-height: 100px;
     height: auto;
     width: auto;
-  }
+  } */
 </style>

@@ -61,15 +61,15 @@
 </script>
 
 <style>
-  * {
+  /* * {
     outline: 1px solid red;
-  }
+  } */
 
-  .jungle {
+  /* .jungle {
     display: flex;
     justify-content: center;
     height: 10rem;
-    /* align-items: center */
+    align-items: center
   }
 
   .fight {
@@ -89,5 +89,5 @@
 
   .battlefield {
     height: 100vh;
-  }
+  } */
 </style>
