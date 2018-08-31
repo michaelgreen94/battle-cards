@@ -16,7 +16,9 @@
   body {
     margin: 0;
     padding: 0;
-    background: url('./assets/tress.jpg');
+    background: url('./assets/darkroom.jpg');
+    background-color: rgba(0, 0, 0, 0.65);
+    background-blend-mode: multiply;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
