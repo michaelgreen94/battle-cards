@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid select-deck">
+  <div class="world">
     <div v-if="!game.id">
       <StartGame/>
     </div>
@@ -29,3 +29,9 @@
     }
   }
 </script>
+
+<style>
+  .world {
+    height: 100%;
+  }
+</style>

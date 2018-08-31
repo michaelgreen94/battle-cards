@@ -126,4 +126,12 @@
     width: calc( 180px / 2);
     height: calc( 50px / 2);
   }
+
+  .enemy-hand {
+    transform: translate(0%, 6%);
+  }
+
+  .player-hand {
+    transform: translate(0%, 12%);
+  }
 </style>
