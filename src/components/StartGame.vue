@@ -96,10 +96,10 @@
   }
 
   .game-name {
-    width: 50%;
-    height: 30%;
+    width: 12rem;
+    height: 10rem;
     position: absolute;
-    top: -26%;
-    left: -9%;
+    top: -8rem;
+    left: -4.5rem;
   }
 </style>
