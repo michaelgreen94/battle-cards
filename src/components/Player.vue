@@ -1,7 +1,7 @@
 <template>
   <div class="player">
     <div class="player-name">{{player.name}}</div>
-    <div class="card" style="" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
+    <div class="card" v-for="(target, key) in player.hand" @click="playerCard(player.id, player.hand[key].id)">
       <div class="stats"><i class="fas fa-bolt"></i> {{player.hand[key].attack}}</div>
       <div class="stats"><i class="fas fa-shield-alt"></i> {{player.hand[key].defense}}</div>
       <div class="stats"><i class="fas fa-heart"></i> {{player.hand[key].health}}</div>
