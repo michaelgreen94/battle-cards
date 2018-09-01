@@ -1,6 +1,6 @@
 <template>
   <div class="enemy">
-    <div class="e-card" style="" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
+    <div class="e-card" v-for="(target, key) in enemy.hand" v-if="enemy.hand[key].visible" @click="enemyCard(enemy.id, enemy.hand[key].id)">
       <div class="stats"><i class="fas fa-bolt"></i> {{enemy.hand[key].attack}}</div>
       <div class="stats"><i class="fas fa-shield-alt"></i> {{enemy.hand[key].defense}}</div>
       <div class="stats"><i class="fas fa-heart"></i> {{enemy.hand[key].health}}</div>
