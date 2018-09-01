@@ -1,11 +1,13 @@
 <template>
   <div class="world">
     <StartGame v-if="!game.id" />
+    <Results v-else-if="game.over" />
     <battlefield v-else></battlefield>
   </div>
 </template>
 
 <script>
+  import Results from "@/components/Results"
   import StartGame from "@/components/StartGame"
   import Battlefield from "@/components/Battlefield"
   export default {

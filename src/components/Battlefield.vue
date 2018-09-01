@@ -5,7 +5,6 @@
     </div>
     <div class="jungle">
       <a href="#" v-bind:class="{fight : attackObj.playerCardId && attackObj.opponentCardId}" @click.prevent="attack"><span></span>Fight</a>
-      <a class="fight" href="#" v-if="game.over">New Game</a>
     </div>
     <div class="player-hand">
       <Player v-on:addPlayerParams="addPlayerParams" />
