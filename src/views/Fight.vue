@@ -22,7 +22,8 @@
     },
     components: {
       StartGame,
-      Battlefield
+      Battlefield,
+      Results
     }
   }
 </script>

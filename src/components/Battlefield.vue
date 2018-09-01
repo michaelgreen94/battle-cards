@@ -63,7 +63,7 @@
   }
 </script>
 
-<style>
+<style scoped>
   /* * {
     outline: 1px solid red;
   } */

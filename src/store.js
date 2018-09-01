@@ -20,6 +20,9 @@ export default new Vuex.Store({
     },
     storeGames(state, data) {
       state.games = data
+    },
+    newNewGame(state) {
+      state.game = {}
     }
   },
   actions: {
@@ -49,6 +52,9 @@ export default new Vuex.Store({
           console.log('re-getting game after attack')
           dispatch('getGame', payload.gameId)
         })
+    },
+    reset({ commit, dispatch }) {
+      commit('newNewGame')
     }
   }
 })
