@@ -69,7 +69,7 @@
   } */
 
   .jungle {
-    /* height: 12vh; */
+    min-height: fit-content;
     width: 100%;
     display: flex;
     justify-content: center;
